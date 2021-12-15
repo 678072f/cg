@@ -2,6 +2,7 @@
 #define _TBM_H
 
 #include <iostream>
+#include <iomanip>
 
 class tbm930 {
 public:

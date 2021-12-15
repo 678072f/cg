@@ -43,10 +43,10 @@ bool tbm930::cgLimitsSI(double weight, double cg) {
 }
 
 void tbm930::outputData() {
-    print('')
-    print('')
-    print("Empty Weight (lbs.):\t\t\t%.2f" %(emptyWeight))
-    print("Empty CG (%% MAC):\t\t\t\t%.2f" %(cgMAC_empty))
+    std::cout << std::fixed << std::endl;
+    std::cout << std::setprecision(2) << std::endl;
+    std::cout << "Empty Weight (lbs.):\t\t\t" << weights[0] << std::endl;
+    std::cout << "Empty CG (%% MAC):\t\t\t\t" %(cgMAC_empty))
     print('')
     print("ZFW (lbs.):\t\t\t\t%.2f" %(ZFW))
     print("CG of ZFW (%% MAC):\t\t\t\t%.2f" %(cg_ZFW))
