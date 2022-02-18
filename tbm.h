@@ -4,21 +4,26 @@
 #include <iostream>
 #include <iomanip>
 
+double sum(double *array);
+
 class tbm930 {
 public:
     // Program setup
     tbm930();
     void setUnits(char* unit);
     char* getUnits();
+    void inputParams();
     
     // Final data output
-    void outputData();
+    void outputDataUS();
+    void outputDataSI();
     
     // End of program
     ~tbm930();
 private:
     // Input parameters
     double weights[5];
+    double fuel[3];
     
     // Output parameters
     double moments[5];
@@ -41,7 +46,8 @@ private:
     double armsSI[6] = {3.250, 4.534, 5.710, 6.785, 7.695, 4.820};
     
     // Functions for calculations
-    double calcMoments(double W, double arm);
+    double calcMomentsUS();
+    double calcMomentsSI();
     double calcCGUS(double arm);
     double calcCGSI(double arm);
     double calcArm(double M, double W);
